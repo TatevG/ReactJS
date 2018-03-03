@@ -1,33 +1,60 @@
 // even or odd
-let n = ;
-let result = ;
+let n = 15;
+let result;
 
-/*
-  your code
-*/
+if(n%2 == 0){
+  result = "even";
+}else{
+  result = "odd";
+}
 
 console.log(result); // prints even or odd
 
 
 
 // weekday
-let weekdayNumber = ;
-let weekday = ;
+let weekdayNumber = 6;
+let weekday;
 
-/*
-  your code
-*/
+switch (weekdayNumber) {
+  case 1:
+    weekday = "erkushabti";
+    break;
+  case 2:
+    weekday = "ereqshabti";
+    break;
+  case 3:
+    weekday = "choreqshabti";
+    break;
+  case 4:
+    weekday = "hingshabti";
+    break;
+  case 5:
+    weekday = "urbat";
+    break;
+  case 6:
+    weekday = "shabat";
+    break;
+  case 7:
+    weekday = "kiraki";
+    break;
+  default:
+    weekday = "No weekday";
+    break;
+}
 
 console.log(weekday); // monday, tuesday, wed... weekend for sat and sun
 
 
 // max
-let a = ;
-let b = ;
-let max = ;
+let a = 5;
+let b = 10;
+let max = 0;
 
-/*
-  your code
-*/
+if (a>b) {
+  max = a;
+}else{
+  max = b;
+}
 
 console.log(max); // should print a or b
