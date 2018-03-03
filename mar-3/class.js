@@ -10,12 +10,6 @@ const func = a => (a * a);
 
 
 
-
-
-
-
-
-
 const test = (b) => {
     b.a = 6;
 };
