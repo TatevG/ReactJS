@@ -18,7 +18,7 @@ const arrayIntoObject = (arr) => {
     // lessThan10 is an array of values of "arr", which values are less than 10
     // return that object with 2 properties
     let obj = {
-        moreThan10: [],
+        moreThan: [],
         lessThan10: [],
     }
     for (const i in arr) {
