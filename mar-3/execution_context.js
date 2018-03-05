@@ -5,16 +5,22 @@ const obj = {
   age: 14
 };
 
+// const f = () => {
+//   console.log(this.name);
+// };
+
 const f = () => {
-  console.log(this.name);
+  console.log(obj.name);
 };
 
-// f();
+f();
 
-// uncomment the function call
-// run the program, see the result
-// change the program in a way that the logged tesult will be 'a'
-// do the same thing in 2 ways, see the examples in class.js
+console.log(obj.name);
+
+// uncomment the function call +
+// run the program, see the result +
+// change the program in a way that the logged tesult will be 'a' +
+// do the same thing in 2 ways, see the examples in class.js +
 
 
 
@@ -26,13 +32,19 @@ const another_obj = {
   n2: 12
 };
 
-const func = function(n){
-  console.log((this.n1 + this.n2)*n);
+// const func = function(n){
+//   console.log((this.n1 + this.n2)*n);
+// }
+
+const func = function (n) {
+  console.log((another_obj.n1 + another_obj.n2) * n);
 }
 
-// func(4);
+func(4);
 
-// uncomment the function call
-// run the program, see the result
-// change the program in a way that the logged tesult will be (56+12)*n
-// do the same thing in 2 ways, see the examples in class.js
+console.log((another_obj.n1 + another_obj.n2) * n);
+
+// uncomment the function call +
+// run the program, see the result +
+// change the program in a way that the logged tesult will be (56+12)*n +
+// do the same thing in 2 ways, see the examples in class.js +
