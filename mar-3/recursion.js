@@ -2,6 +2,8 @@ const power = (num, pow) => {
   // !RECURSION!
   // The program must take two numbers as arguments
   // It should return the number 'num' in power of number 'pow' (num ^ pow)
+  if(pow < 0) return false;
+    return (pow === 0) ? 1 : num * power(num, pow - 1);
 }
 
 const range = (numA, numB) => {
@@ -9,6 +11,16 @@ const range = (numA, numB) => {
   // The program must take two numbers as arguments
   // It should return an array of numbers between numA and numB
   // (the array should not include numA and numB)
+  let res = [];
+  let temp;
+  if (numA === numB || numA === numB - 1) return res;
+  if (numA > numB) {
+    temp = numA;
+    numA = numB;
+    numB = temp;
+  }
+  res.push(numA + 1);
+  return res.concat(range(numA + 1, numB));
 }
 
 const factorial = (num) => {
@@ -23,10 +35,14 @@ const factorial = (num) => {
   // 4! === 4 * 3 * 2 * 1 === 24
   // 1! === 1
   // 0! === 1
+  if(num <= 0) return 0;
+  return (num === 1)? 1: num * (factorial(num - 1));
 }
 
 const sumValues = (arr) => {
   // !RECURSION!
   // The program must take array of numbers as an argument
   // and return the sum of all values
+  if (arr.length == 0) return undefined; 
+  return (arr.length === 0) ? 0 : arr[0] + sumValues(arr.slice(1));
 }
