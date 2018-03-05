@@ -13,9 +13,13 @@ const f = () => {
   console.log(obj.name);
 };
 
-f();
+// f();
 
-console.log(obj.name);
+f.call(obj, 'name');
+
+f.apply(obj, ['name']);
+
+
 
 // uncomment the function call +
 // run the program, see the result +
@@ -42,7 +46,10 @@ const func = function (n) {
 
 func(4);
 
-console.log((another_obj.n1 + another_obj.n2) * n);
+
+func.call(another_obj, 4, 'n1', 'n2');
+
+func.apply(another_obj, [4, 'n1', 'n2']);
 
 // uncomment the function call +
 // run the program, see the result +
