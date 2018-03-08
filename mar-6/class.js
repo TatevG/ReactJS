@@ -76,3 +76,4 @@ myPromise.then((value) => {
 
 console.log('adjasdasd');
 console.log('123123');
+console.log("Hello");
