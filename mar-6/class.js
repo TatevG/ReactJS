@@ -74,5 +74,5 @@ myPromise.then((value) => {
     console.log(err)
 })
 
-console.log('adjasdasd')
-console.log('123123');;
+console.log('adjasdasd');
+console.log('123123');
