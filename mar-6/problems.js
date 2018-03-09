@@ -34,6 +34,14 @@ console.log(originalArray);
 
 
 // make this code shorter
+// const obj1 = {
+//     abcdefghijklmnopqrstuvwxyz: 123
+// };
+
+// const abcdefghijklmnopqrstuvwxyz = obj1.abcdefghijklmnopqrstuvwxyz;
+
+// console.log(abcdefghijklmnopqrstuvwxyz);
+
 
 const obj1 = {
     abcdefghijklmnopqrstuvwxyz: 123
