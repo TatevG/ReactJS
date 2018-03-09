@@ -70,3 +70,28 @@ newPromise.then((val) => {
 }).catch((e) => {
     console.log(e);
 })
+
+
+
+const resolveAfter = (val) => {
+    return (val > 0.5) ? new Promise(resolve => {
+        setTimeout(() => {
+            resolve('I got resolved');
+        }, 2000);
+    }) : new Promise(reject => {
+        setTimeout(() => {
+            reject('I got rejected');
+        }, 2000);
+    });
+}
+
+const respond = async () => {
+    try {
+        const response = await resolveAfter(Math.random());
+        console.log(response);
+    }
+    catch (e) {
+        console.log(e);
+    }
+};
+respond();
