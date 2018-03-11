@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Form</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <p>The World of fruit</p>
+        </header>
+        <div id="content">
+            <p>Fruit Survey</p>
+            <form>
+                <fieldset>
+                    <label>Name
+                        <input type="text" />
+                    </label><br>
+                    <label>Address
+                        <input type="text" />
+                    </label><br>
+                    <label>Email
+                        <input type="email" />
+                    </label><br>
+                    <label>How many pieces of fruit<br> do you eat per day?<br>
+                        <input type="radio" name="howMany" value="zero"> 0<br>
+                        <input type="radio" name="howMany" value="one"> 1<br>
+                        <input type="radio" name="howMany" value="two"> 2<br>
+                        <input type="radio" name="howMany" value="more"> More than 2
+                    </label><br>
+                    <select size="4" multiple>
+                        <option value="apple">Apple</option>
+                        <option value="banana">Banana</option>
+                        <option value="plum">Plum</option>
+                        <option value="pomegranate">Pomegranate</option>
+                        <option value="lemon">Lemon</option>
+                        <option value="apricote">Apricote</option>
+                    </select><br>
+                    <input type="checkbox" name="brochure" value="Yes"><br>
+                    <input type="submit" name="submit" value="Submit">
+                </fieldset>    
+            </form>   
+        </div>
+    </div>  
+</body>
+</html>

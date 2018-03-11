@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.wrapper div {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-left: 200px;
+}
+
+.wrapper input {
+  width: 300px;
+  color: blue;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
