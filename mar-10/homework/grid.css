@@ -1,0 +1,181 @@
+body {
+    display: grid;
+    background-color: #FFFF99;
+    width: auto;
+    height: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-gap: 0;
+}
+
+header {
+    background-color: #FFCC00;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    font-size: 25px;
+    text-align: center;
+}
+
+body>div:nth-of-type(1) {
+    background-color: #FFFF99;
+    align-content: center;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* Name */
+
+body>label:nth-of-type(1) {
+    background-color: #FFFF99;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+
+/* Name input */
+
+.inpt:nth-of-type(1) {
+    width: 200px;
+    height: 25px;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+
+/* Address */
+
+body>label:nth-of-type(2) {
+    background-color: #FFFF99;
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+
+/* Address input */
+
+.inpt:nth-of-type(2) {
+    width: 200px;
+    height: 25px;
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
+
+/* Email */
+
+body>label:nth-of-type(3) {
+    background-color: #FFFF99;
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+
+/* Email input */
+
+.inpt:nth-of-type(3) {
+    width: 200px;
+    height: 25px;
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+}
+
+
+/* Radio Question */
+
+body>label:nth-of-type(4) {
+    background-color: #FFFF99;
+    grid-row: 6 / 10;
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+
+/* radio buttons 5, 6, 7, 8 */
+
+body>label:nth-of-type(5) {
+    background-color: #FFFF99;
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+}
+
+body>label:nth-of-type(6) {
+    background-color: #FFFF99;
+    grid-row: 7 / 8;
+    grid-column: 2 / 3;
+}
+
+body>label:nth-of-type(7) {
+    background-color: #FFFF99;
+    grid-row: 8 / 9;
+    grid-column: 2 / 3;
+}
+
+body>label:nth-of-type(8) {
+    background-color: #FFFF99;
+    grid-row: 9 / 10;
+    grid-column: 2 / 3;
+}
+
+
+/* Favorite Fruits */
+
+body>label:nth-of-type(9) {
+    background-color: #FFFF99;
+    grid-row: 10 / 12;
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+
+/* select option */
+
+.select {
+    background-color: white;
+    width: 145px;
+    height: 70px;
+    grid-row: 10 / 12;
+    grid-column: 2 / 3;
+    justify-content: flex-end;
+}
+
+
+/* Brochure question */
+
+body>label:nth-of-type(10) {
+    background-color: #FFFF99;
+    grid-row: 12 / 13;
+    grid-column: 1 / 2;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+
+/* checkbox */
+
+body>label:nth-of-type(11) {
+    background-color: #FFFF99;
+    grid-row: 12 / 13;
+    grid-column: 2 / 3;
+    justify-content: flex-end;
+}
+
+
+/* Submit */
+
+body>label:nth-of-type(12) {
+    background-color: #FFFF99;
+    grid-row: 13 / 14;
+    grid-column: 2 / 3;
+    justify-content: flex-end;
+}
