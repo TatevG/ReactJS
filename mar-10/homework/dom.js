@@ -4,7 +4,6 @@ const myFunc = async () => {
     const name = document.getElementById("gitUsr").value;
     try {
         const url = 'https://api.github.com/users/'+name;
-        console.log(url);
         const response = await fetch(url);
         const value = await response.json();
         let msg = "";
