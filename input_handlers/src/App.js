@@ -10,13 +10,6 @@ class App extends Component {
     };
   }
 
-  inputChangeHandler1 = e => {
-    this.setState({inp1: e.target.value});
-  }
-
-  inputChangeHandler2 = e => {
-    this.setState({inp2: e.target.value});
-  }
 
   inputChangeHandler = e => {
     this.setState({[e.target.id]: e.target.value});
@@ -27,8 +20,6 @@ class App extends Component {
     return (
       <div className="App">
         <Input
-          changeHandler1={this.inputChangeHandler1}
-          changeHandler2={this.inputChangeHandler2}
           changeHandler={this.inputChangeHandler}
         />
       </div>

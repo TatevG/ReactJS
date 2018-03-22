@@ -6,6 +6,7 @@ const myFunc = async () => {
         const url = 'https://api.github.com/users/'+name;
         const response = await fetch(url);
         const value = await response.json();
+        console.log(value);
         let msg = "";
         if (value.message == "Not Found") {
             msg = value.message;

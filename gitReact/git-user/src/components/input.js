@@ -4,12 +4,12 @@ export default
     class Input extends React.Component {
     render() {
         return (
-            <form >
+            <div>
                 <label>Git Username:
-                <input type="text" id="clickInput" onChange={this.props.handleChange}/>
+                <input type="text" onChange={this.props.changeHandler} />
                 </label>
-                <input type="submit" id="btn" value="Submit" onSubmit={this.handleSubmit}/>
-            </form>
+                <input type='button' value='Check' onClick={this.props.change} />
+            </div>
         );
     }
 }
