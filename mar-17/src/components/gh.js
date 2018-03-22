@@ -5,7 +5,6 @@ export default
 class Gh extends React.Component {
   constructor(){
     super();
-    console.log('constructor');
     this.state = {
       user: null
     };
@@ -25,15 +24,6 @@ class Gh extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState){
     return !(nextState.user.login === 'narghev');
-  }
-  componentWillUpdate(){
-    console.log('cwu');
-  }
-  componentDidUpdate(){
-    console.log('cdu');
-  }
-  componentWillMount(){
-    console.log('cwm');
   }
   render(){
     console.log('render');
