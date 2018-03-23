@@ -1,10 +1,8 @@
 import React from 'react';
 
-export default
-    class Data extends React.Component {
-        render(){
-            return(
-                <div id="res"></div>
-            );
-        }
-    }
+const Data = ({user}) =>(
+  <div>
+    {user ? JSON.stringify(user) : <p>Enter a username</p>}
+  </div>
+)
+export default Data
