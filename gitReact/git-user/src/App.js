@@ -2,40 +2,44 @@ import React from 'react';
 import Input from './components/input';
 import Data from './components/data';
 
+const URL = 'https://api.github.com/users/';
+
 class App extends React.Component {
+constructor(){
+  super();
+this.state = {
+  user: null,
+  userName: ''
+};
+}
 
-  inputChangeHandler = e => {
-    this.setState({ [e.target]: e.target.value });
-    
+changeHandler = event =>{
+  this.setState({userName: event.target.value});
+}
+
+clickHandler = async () =>{
+  const {userName} = this.state;
+  let user = null;
+  try{
+    const result = await fetch(`${URL}${userName}`);
+    user = await  result.json();
   }
-// async change () {
-//   const state = this.state;
-//   try {
-//     const url = 'https://api.github.com/users/' + state;
-//     const response = await fetch(url);
-//     const result = await response.json();
-//     console.log(result);
-//   }
-//   catch (e) {
-//     console.log(e);
-//   }
-//   return result;
-//   }
+  catch(e){
+    this.setState({user});
+  }
+}
 
-  render() {
-    console.log(this.state);
-    // console.log(change());
-    return (
-      <div className="App">
-        <Input
-          changeHandler={this.inputChangeHandler}
-          clickHandler={this.change}
-        />
-        <Data 
-          
-        />
+render(){
+  const {user} = this.state;
+  return (
+        <div className="App">
+          <Input
+            changeHandler={this.changeHandler}
+            clickHandler={this.clickHandler}
+          />
+        <Data {... {user}} />
       </div>
-    );
+  );
   }
 }
 
