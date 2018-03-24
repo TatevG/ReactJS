@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Data from './components/data';
+// import Data from './components/data';
 import Inputs from './components/inputs';
+import Info from './components/info';
 
 const URL = 'https://api.github.com/users/';
 
@@ -33,9 +34,10 @@ class App extends Component {
           changeHandler={this.changeHandler}
           clickHandler={this.clickHandler}
         />
-        <Data {...{user}}/>
+        {/* <Data {...{user}}/> */}
+        <Info {... {user}} />
       </div>
-  );
+    );
   }
 }
 
