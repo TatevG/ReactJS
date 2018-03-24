@@ -9,6 +9,7 @@ div.info {
 div>section>img {
     width: 200px;
     height: 200px;
+    border-radius: 100px;
     border: 1px solid grey;
 }
 
@@ -28,4 +29,8 @@ div>section:nth-of-type(3) {
     grid-row: 4/5;
     grid-column: 6/7;
     text-align: center;
+}
+
+hr{
+    width: 65%;
 }
