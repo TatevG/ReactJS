@@ -1,7 +1,9 @@
 import React from 'react';
+import '../stylesheets/input.css'
+
 
 const Inputs = ({changeHandler, clickHandler}) => (
-  <div>
+  <div class="searchbox">
     <input type="text" onChange={changeHandler} />
     <button onClick={clickHandler}>Search</button>
   </div>

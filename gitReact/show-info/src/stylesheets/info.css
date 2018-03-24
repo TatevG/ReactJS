@@ -1,3 +1,31 @@
-.info{
+div.info {
     display: grid;
+    height: 50px;
+    margin-top: 15px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+div>section>img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+}
+
+div>section:nth-of-type(1) {
+    grid-row: 2/5;
+    grid-column: 4/6;
+    text-align: center;
+}
+
+div>section:nth-of-type(2) {
+    grid-row: 2/3;
+    grid-column: 6/7;
+    text-align: center;
+}
+
+div>section:nth-of-type(3) {
+    grid-row: 4/5;
+    grid-column: 6/7;
+    text-align: center;
 }

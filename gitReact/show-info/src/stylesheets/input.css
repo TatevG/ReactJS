@@ -1,0 +1,30 @@
+div.searchbox {
+    display: grid;
+    height: 50px;
+    margin-top: 15px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: ". . . a a b . . .";
+}
+
+div.searchbox input[type=text] {
+    grid-area: a;
+    font-size: 17px;
+    padding-left: 15px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+}
+
+div.searchbox button {
+    grid-area: b;
+    float: left;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+div.searchbox button:hover {
+    background: #0b7dda;
+}
