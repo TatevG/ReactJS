@@ -1,7 +1,6 @@
 import React from 'react';
 import '../stylesheets/info.css';
 
-
 const Info = ({ user }) => (
     <div class="info">
         <section>{user ? <img src={`https://avatars2.githubusercontent.com/u/${user.id}?v=4`} alt="user Avatar" /> : <p></p>}</section>
