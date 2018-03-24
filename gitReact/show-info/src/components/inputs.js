@@ -10,7 +10,6 @@ const Inputs = ({changeHandler, clickHandler}) => (
 
 export default Inputs;
 
-
 // export default
 // class Inputs extends React.Component {
 //   render(){
