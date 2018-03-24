@@ -1,39 +1,39 @@
-import React from 'react';
-import Input from './components/input';
+import React, { Component } from 'react';
 import Data from './components/data';
+import Inputs from './components/inputs';
 
-class App extends React.Component {
+const URL = 'https://api.github.com/users/';
 
-  inputChangeHandler = e => {
-    this.setState({ [e.target]: e.target.value });
-    
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      user: null,
+      userName: ''
+    };
   }
-// async change () {
-//   const state = this.state;
-//   try {
-//     const url = 'https://api.github.com/users/' + state;
-//     const response = await fetch(url);
-//     const result = await response.json();
-//     console.log(result);
-//   }
-//   catch (e) {
-//     console.log(e);
-//   }
-//   return result;
-//   }
-
+  changeHandler = event => {
+    this.setState({userName: event.target.value});
+  }
+  clickHandler = async () => {
+    const {userName} = this.state;
+    let user = null;
+    try {
+      const res = await fetch(`${URL}${userName}`);
+      user = await res.json();
+    }
+    catch(e){}
+    this.setState({user});
+  }
   render() {
-    console.log(this.state);
-    // console.log(change());
+    const {user} = this.state;
     return (
       <div className="App">
-        <Input
-          changeHandler={this.inputChangeHandler}
-          clickHandler={this.change}
+        <Inputs
+          changeHandler={this.changeHandler}
+          clickHandler={this.clickHandler}
         />
-        <Data 
-          
-        />
+        <Data {...{user}}/>
       </div>
     );
   }
