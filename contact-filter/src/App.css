@@ -1,28 +1,39 @@
-.App {
-  text-align: center;
+.contacts {
+    width: 300px;
+    margin: 0 auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.search-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.contacts-list {
+    padding: 0;
+    width: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.contact {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px dotted grey;
 }
 
-.App-intro {
-  font-size: large;
+.contact-image {
+    border-radius: 50%;
+    margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.contact-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-number {
+    font-size: 18px;
+    color: grey;
 }
