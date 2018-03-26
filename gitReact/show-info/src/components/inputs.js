@@ -9,15 +9,3 @@ const Inputs = ({changeHandler, clickHandler}) => (
 );
 
 export default Inputs;
-
-// export default
-// class Inputs extends React.Component {
-//   render(){
-//     return(
-//       <div>
-//         <input type="text" onChange={this.props.changeHandler} />
-//         <button onClick={this.props.clickHandler}>Search</button>
-//       </div>
-//     );
-//   }
-// }
