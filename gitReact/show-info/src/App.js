@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Data from './components/data';
 import Inputs from './components/inputs';
 import Info from './components/info';
 
@@ -34,7 +33,6 @@ class App extends Component {
           changeHandler={this.changeHandler}
           clickHandler={this.clickHandler}
         />
-        {/* <Data {...{user}}/> */}
         <Info {... {user}} />
       </div>
     );
