@@ -10,8 +10,7 @@ class App extends Component {
     this.state = {
       id: 0,
       name: '',
-      phoneNumber:'',
-      image: ''
+      username:'',
     };
   }
 
@@ -42,9 +41,9 @@ class App extends Component {
           this.state.displayedContacts.map(function (el) {
             return <Contacts
               key={el.id}
+              id={el.id}
               name={el.name}
-              phoneNumber={el.phoneNumber}
-              image={el.image}
+              username={el.username}
             />;
           })
         }
