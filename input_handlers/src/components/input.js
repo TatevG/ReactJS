@@ -7,7 +7,7 @@ class A extends React.Component {
       <div>
         <input id="inp1" type="text" onChange={this.props.changeHandler}/>
         <input id="inp2" type="text" onChange={this.props.changeHandler}/>
-      </div> 
+      </div>
     );
   }
 }

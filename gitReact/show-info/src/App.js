@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import Data from './components/data';
 import Inputs from './components/inputs';
-import Info from './components/info';
+import Loading from './components/loading';
+import loadingGif from './images/loading.gif';
 
 const URL = 'https://api.github.com/users/';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       user: null,
@@ -13,27 +15,41 @@ class App extends Component {
     };
   }
   changeHandler = event => {
-    this.setState({userName: event.target.value});
+    this.setState({ userName: event.target.value });
   }
   clickHandler = async () => {
-    const {userName} = this.state;
+    this.setState({ loading: true });
+    const { userName } = this.state;
     let user = null;
     try {
       const res = await fetch(`${URL}${userName}`);
+
+      if (res.status !== 200) {
+        this.setState({ user: 'not found', loading: false });
+        return;
+      }
+
       user = await res.json();
     }
-    catch(e){}
-    this.setState({user});
+    catch (e) { }
+    this.setState({ user, loading: false });
   }
   render() {
-    const {user} = this.state;
+    const { user, loading } = this.state;
+    if (loading) {
+      return (
+        <div className="App">
+          <Loading {...{ loadingGif }} />
+        </div>
+      );
+    }
     return (
       <div className="App">
         <Inputs
           changeHandler={this.changeHandler}
           clickHandler={this.clickHandler}
         />
-        <Info {... {user}} />
+        <Data {...{ user }} />
       </div>
     );
   }

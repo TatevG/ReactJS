@@ -1,0 +1,15 @@
+div.info {
+    display: grid;
+    height: 50px;
+    margin-top: 15px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.user-not-found {
+    grid-row: 5/7;
+    grid-column: 2/9;
+    text-align: center;
+    color: #2196F3;
+    font-size: 2rem;
+}

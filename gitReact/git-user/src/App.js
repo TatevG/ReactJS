@@ -19,7 +19,7 @@ class App extends Component {
     const {userName} = this.state;
     let user = null;
     try {
-      const res = await fetch(`${URL}${userName}`);
+      const res = await fetch(`${URL}${userName}/repos`);
       user = await res.json();
     }
     catch(e){}
