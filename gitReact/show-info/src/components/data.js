@@ -12,7 +12,7 @@ const Data = ({ user }) => {
             </div>
         );
 
-    const { id, login, avatar_url } = user;
+    const { id, login, avatar_url} = user;
     return (
             <Info {...{ id, login, avatar_url }} />
     );
