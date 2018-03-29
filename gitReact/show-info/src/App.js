@@ -55,7 +55,7 @@ class App extends Component {
           {...{ user }} 
         />
         <Repos 
-          {...{user}} 
+          // {...{user}} 
           />
       </div>
     );

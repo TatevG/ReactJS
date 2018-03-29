@@ -20,18 +20,72 @@ class Repos extends React.PureComponent{
             console.log(repos);
         }
         catch (e) {
-            console.log(e);
+            // console.log(e);
          }
         this.setState({ repoNames });
     }
 
     render() {
-        const { repoNames} = this.state;
+        console.log(this.repoNames);
         return (
             <div className="repos">
-                {repoNames}
+                {this.repoNames}
             </div>
         );
     }
 }
 export default Repos
+
+
+
+
+
+
+
+
+// let searchTerm;
+
+// class Repos extends React.Component {
+
+//     constructor(props) {
+//         super(props);
+//         this.onClick = this.onClick.bind(this);
+//         this.state = { repositories: [] };
+//     }
+
+
+//     render() {
+//         return (
+//             <div>
+//                 <form>
+//                     <input type="text" className="repos" ref={(input) => { this.repos = input; }} />
+//                     <button onClick={this.onClick}>Search</button>
+//                 </form>
+//                 <div className="foundRepo">{this.props.name}</div>
+//                 <h2>Repositories</h2>
+//                 <ul>
+//                     {this.state.repositories.map((item, index) => (
+//                         <li key={index}>
+//                             {item.name}
+//                         </li>
+//                     ))}
+//                 </ul>
+//             </div>
+//         );
+//     }
+
+//     onClick(event) {
+
+//         searchTerm = this.repos.value;
+//         let endpoint = 'https://api.github.com/users/' + searchTerm + '/repos';
+//         console.log(searchTerm);
+//         fetch(endpoint)
+//             .then(blob => blob.json())
+//             .then(response => {
+//                 this.setState({ repositories: response.items });
+//             });
+//         event.preventDefault();
+
+//     }
+// }
+
