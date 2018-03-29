@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Data from './components/data';
 import Inputs from './components/inputs';
 import Loading from './components/loading';
-// import Repos from './components/repos';
 import loadingGif from './images/loading.gif';
+import Repos from './components/repos';
 
 const URL = 'https://api.github.com/users/';
 
@@ -35,6 +35,7 @@ class App extends Component {
     catch (e) { }
     this.setState({ user, loading: false });
   }
+
   render() {
     const { user, loading } = this.state;
     if (loading) {
@@ -50,7 +51,12 @@ class App extends Component {
           changeHandler={this.changeHandler}
           clickHandler={this.clickHandler}
         />
-        <Data {...{ user }} />
+        <Data 
+          {...{ user }} 
+        />
+        <Repos 
+          {...{user}} 
+          />
       </div>
     );
   }
