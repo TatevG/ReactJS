@@ -18,13 +18,15 @@
 .repoList {
     display: block;
     text-align: center;
-    padding: 0 15px 0 15px;
+    padding: 5px 15px 5px 15px;
     background-color: #F1F1F1;
     text-decoration: none;
     font-size: 1.5rem;
     color: #2196F3;
 }
-
+.repoList :hover{
+    color: grey;
+}
 .repoList:last-child {
     margin-bottom: 15px;
     border-radius: 0 0 5px 5px;
