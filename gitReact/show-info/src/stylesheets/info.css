@@ -3,8 +3,10 @@ div.info {
     height: 50px;
     margin-top: 15px;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-gap: 15px;
+    font-size: 1.5rem;
+    color: #757575;
 }
 
 div>section>img {
@@ -21,25 +23,25 @@ div>section:nth-of-type(1) {
 }
 
 div>section:nth-of-type(2) {
-    grid-row: 2/3;
+    grid-row: 5/6;
     grid-column: 6/7;
     text-align: center;
 }
 
 div>section:nth-of-type(3) {
-    grid-row: 3/4;
+    grid-row: 6/7;
     grid-column: 6/7;
     text-align: center;
 }
 
-div>section:nth-of-type(4) {
+/* div>section:nth-of-type(4) {
     grid-row: 4/5;
     grid-column: 6/7;
     text-align: center;
     align-items: center;
     width: 120px;
     height: 30px;
-    background: #2196F3;
+    background: #61DAFB;
     color: white;
     padding-top: 12px;
     font-size: 17px;
@@ -49,5 +51,5 @@ div>section:nth-of-type(4) {
 }
 
 div>section:nth-of-type(4):hover {
-    background: #0b7dda;
-}
+    background: #61DAFB;
+} */

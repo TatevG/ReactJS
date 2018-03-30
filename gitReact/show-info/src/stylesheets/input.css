@@ -8,10 +8,11 @@ div.searchbox {
 
 div.searchbox input[type=text] {
     grid-area: a;
-    font-size: 17px;
+    font-size: 1.2rem;
     padding-left: 15px;
     border: 1px solid grey;
     background: #f1f1f1;
+    color: #757575;
 }
 
 div.searchbox button {
@@ -19,7 +20,7 @@ div.searchbox button {
     float: left;
     background: #2196F3;
     color: white;
-    font-size: 17px;
+    font-size: 1.5rem;
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;

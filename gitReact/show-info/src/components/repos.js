@@ -1,91 +1,38 @@
 import React from 'react';
-import '../stylesheets/input.css';
+import RepoList from './repoList';
+import '../stylesheets/repos.css';
 
 
 class Repos extends React.PureComponent{
-    constructor(user) {
-        super(user);
+    constructor() {
+        super();
         this.state = {
-            repos: null,
-            repoNames: user.repos_url
+            repos: [],
         };
     }
     async componentDidMount (){
-        const { repoNames } = this.state;
-        let repos = null;
-        console.log(repoNames);
         try {
-            const res = await fetch(`${repoNames}`);
-            repos = await res.json();
-            console.log(repos);
+            const res = await fetch(this.props.reposUrl);
+            const repos = await res.json();
+            this.setState({repos});
         }
         catch (e) {
-            // console.log(e);
          }
-        this.setState({ repoNames });
     }
 
     render() {
-        console.log(this.repoNames);
+        const {repos } = this.state;
         return (
             <div className="repos">
-                {this.repoNames}
-            </div>
+                <div className="repo1"></div>
+                <div className="repo2">{
+                    repos.map(repo => (
+                        <RepoList {...{ key: repo.name, repo, userName: this.props.userName }} />
+                    ))
+                    }</div>
+                <div className="repo3"></div>
+            </div>            
         );
     }
 }
 export default Repos
-
-
-
-
-
-
-
-
-// let searchTerm;
-
-// class Repos extends React.Component {
-
-//     constructor(props) {
-//         super(props);
-//         this.onClick = this.onClick.bind(this);
-//         this.state = { repositories: [] };
-//     }
-
-
-//     render() {
-//         return (
-//             <div>
-//                 <form>
-//                     <input type="text" className="repos" ref={(input) => { this.repos = input; }} />
-//                     <button onClick={this.onClick}>Search</button>
-//                 </form>
-//                 <div className="foundRepo">{this.props.name}</div>
-//                 <h2>Repositories</h2>
-//                 <ul>
-//                     {this.state.repositories.map((item, index) => (
-//                         <li key={index}>
-//                             {item.name}
-//                         </li>
-//                     ))}
-//                 </ul>
-//             </div>
-//         );
-//     }
-
-//     onClick(event) {
-
-//         searchTerm = this.repos.value;
-//         let endpoint = 'https://api.github.com/users/' + searchTerm + '/repos';
-//         console.log(searchTerm);
-//         fetch(endpoint)
-//             .then(blob => blob.json())
-//             .then(response => {
-//                 this.setState({ repositories: response.items });
-//             });
-//         event.preventDefault();
-
-//     }
-// }
-

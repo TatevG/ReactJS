@@ -12,7 +12,7 @@ const Data = ({ user }) => {
                 <span className="user-not-found">USER NOT FOUND</span>
             </div>
         );
-    const { id, login, avatar_url} = user;
+    const { id, login, avatar_url, repos_url} = user;
     return (
         <div>
             <Info {...{ id, login, avatar_url }} />
