@@ -17,7 +17,6 @@ div.searchbox input[type=text] {
 
 div.searchbox button {
     grid-area: b;
-    float: left;
     background: #2196F3;
     color: white;
     font-size: 1.5rem;

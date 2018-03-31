@@ -24,6 +24,12 @@ class Repos extends React.PureComponent{
         }
     }
 
+    reverse = () => {
+        const { repos } = this.state;
+        const reversedRepos = [...repos].reverse();
+        this.setState({ repos: reversedRepos });
+    };
+
     search = event => {
         const text = event.target.value;
         const filtered = _.filter(this.state.allRepos, (repo) => {
@@ -37,13 +43,15 @@ class Repos extends React.PureComponent{
             <div className="repos">
                 <div className="repo1"></div>
                 <div className="repo2">
-                    <input onChange={this.search} placeholder="Search" />
+                    <input className ="rSearch" type="text" onChange={this.search} placeholder="Search" />
+                    <button className="reserve" onClick={this.reverse}>Reverse it!</button>
                     {
                         loading ? <img src={loadingGif} alt="" /> :
                             repos.map(repo => (
                                 <RepoList {...{ key: repo.name, repo, userName: this.props.userName }} />
                             ))
-                    }</div>
+                    }
+                </div>
                 <div className="repo3"></div>
             </div>            
         );

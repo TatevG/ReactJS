@@ -24,9 +24,11 @@
     font-size: 1.5rem;
     color: #2196F3;
 }
-.repoList :hover{
+
+.repoList :hover {
     color: grey;
 }
+
 .repoList:last-child {
     margin-bottom: 15px;
     border-radius: 0 0 5px 5px;
@@ -34,4 +36,31 @@
 
 .repoList:first-child {
     border-radius: 5px 5px 0 0;
+}
+
+.repo2>input {
+    grid-column: 3/5;
+    font-size: 1.2rem;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    height: 40px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+    color: #757575;
+}
+
+.repo2>button {
+    grid-column: 5/6;
+    background: #2196F3;
+    color: white;
+    height: 44px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.repo2>button:hover {
+    background: #0b7dda;
 }
