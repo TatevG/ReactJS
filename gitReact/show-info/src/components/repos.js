@@ -24,7 +24,7 @@ class Repos extends React.PureComponent{
     }
 
     render() {
-        const { repos, loading } = this.state;
+        const { repos, loading, rVisible } = this.state;
         if (loading) {
             return (
                 <div className="repos">
@@ -33,7 +33,7 @@ class Repos extends React.PureComponent{
             );
         }
         return (
-            <div className="repos">
+            <div className="repos" style="{(this.props.rVisible)? (heigth: 500px) : (heigth:0)}">
                 <div className="repo1"></div>
                 <div className="repo2">{
                     repos.map(repo => (

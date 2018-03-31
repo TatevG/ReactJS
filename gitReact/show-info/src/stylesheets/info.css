@@ -39,18 +39,17 @@ div>section:nth-of-type(4) {
     grid-column: 6/7;
     text-align: center;
     background: #2196F3;
-    color: white;
+    border: 1px solid grey;
     height: 40px;
-    padding-top: 5px;
-    text-decoration: none;
 }
 
-div>section:nth-of-type(4) a:hover {
-    grid-row: 7/8;
-    grid-column: 6/7;
-    text-align: center;
+div>section:nth-of-type(4)>button {
     background: #2196F3;
     color: white;
-    cursor: pointer;
+    font-size: 1.3rem;
     text-decoration: none;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    border: none;
 }

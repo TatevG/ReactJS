@@ -13,7 +13,8 @@ class App extends Component {
     super();
     this.state = {
       user: null,
-      userName: ''
+      userName: '',
+      reposVisible: false
     };
   }
   changeHandler = event => {
@@ -33,12 +34,12 @@ class App extends Component {
 
       user = await res.json();
     }
-    catch (e) { }
-    this.setState({ user, loading: false });
+    catch (e) {}
+    this.setState({ user, loading: false});
   }
 
   render() {
-    const { user, loading } = this.state;
+    const { user, loading, reposVisible } = this.state;
     if (loading) {
       return (
         <div className="App">
@@ -55,7 +56,7 @@ class App extends Component {
         <Data 
           {...{ user }} 
         />
-        {user && <Repos userName={user.login} reposUrl={user.repos_url}/>}
+        {user && <Repos userName={user.login} reposUrl={user.repos_url} rVisible={reposVisible}/>}
       </div>
     );
   }

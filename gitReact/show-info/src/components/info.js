@@ -6,7 +6,7 @@ const Info = ({ login, id, avatar_url}) => (
         <section><img className="img" src={avatar_url} alt="avatar" /></section>
         <section><span className="login"><b>Login:</b>{login}</span></section>
         <section><span className="id"><b>ID:</b>{id}</span></section>
-        <section><a href=""> Repos</a></section>
+        <section><button> Repos</button></section>
     </div>
 );
 
