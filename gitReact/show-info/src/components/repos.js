@@ -1,6 +1,8 @@
 import React from 'react';
 import RepoList from './repoList';
 import '../stylesheets/repos.css';
+import Loading from './loading';
+import loadingGif from '../images/repoLoading.gif';
 
 
 class Repos extends React.PureComponent{
@@ -11,17 +13,25 @@ class Repos extends React.PureComponent{
         };
     }
     async componentDidMount (){
+        this.setState({ loading: true });        
         try {
             const res = await fetch(this.props.reposUrl);
             const repos = await res.json();
-            this.setState({repos});
+            this.setState({ repos, loading: false});
         }
         catch (e) {
-         }
+        }
     }
 
     render() {
-        const {repos } = this.state;
+        const { repos, loading } = this.state;
+        if (loading) {
+            return (
+                <div className="repos">
+                    <Loading {...{ loadingGif }} />
+                </div>
+            );
+        }
         return (
             <div className="repos">
                 <div className="repo1"></div>

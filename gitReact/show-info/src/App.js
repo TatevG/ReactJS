@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Data from './components/data';
 import Inputs from './components/inputs';
 import Loading from './components/loading';
+import loadingGif from './images/loading.gif'; 
 import Repos from './components/repos';
-import loadingGif from './images/loading.gif';
+
 
 const URL = 'https://api.github.com/users/';
 

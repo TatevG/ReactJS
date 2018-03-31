@@ -3,7 +3,7 @@ div.info {
     height: 50px;
     margin-top: 15px;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-gap: 15px;
     font-size: 1.5rem;
     color: #757575;
@@ -34,22 +34,23 @@ div>section:nth-of-type(3) {
     text-align: center;
 }
 
-/* div>section:nth-of-type(4) {
-    grid-row: 4/5;
+div>section:nth-of-type(4) {
+    grid-row: 7/8;
     grid-column: 6/7;
     text-align: center;
-    align-items: center;
-    width: 120px;
-    height: 30px;
-    background: #61DAFB;
+    background: #2196F3;
     color: white;
-    padding-top: 12px;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
+    height: 40px;
+    padding-top: 5px;
+    text-decoration: none;
 }
 
-div>section:nth-of-type(4):hover {
-    background: #61DAFB;
-} */
+div>section:nth-of-type(4) a:hover {
+    grid-row: 7/8;
+    grid-column: 6/7;
+    text-align: center;
+    background: #2196F3;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
