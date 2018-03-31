@@ -1,6 +1,5 @@
 import React from 'react';
 import Info from './info';
-// import Repos from './repos';
 
 import '../stylesheets/data.css';
 
