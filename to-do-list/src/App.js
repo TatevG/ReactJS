@@ -18,8 +18,7 @@ class App extends Component {
   }
 
 clickHandler = e => {
-  const {term} = this.state;
-  let items = [];
+  const {term, items } = this.state;
   if(term !== ''){
     items.push(term);
   }
