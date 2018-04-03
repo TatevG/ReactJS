@@ -1,0 +1,21 @@
+body{
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (4, 1fr);
+}
+div>textarea {
+    justify-self: center;
+    width: 250px;
+    height: 150px;
+    resize: none;
+}
+
+div>button {
+    grid-area: 4/4;
+    color: white;
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
