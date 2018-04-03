@@ -14,7 +14,7 @@ class Repos extends React.PureComponent{
             loading: true
         };
     }
-    async componentDidMount (){   
+    async componentDidMount (){
         try {
             const res = await fetch(this.props.reposUrl);
             const repos = await res.json();
@@ -53,7 +53,7 @@ class Repos extends React.PureComponent{
                     }
                 </div>
                 <div className="repo3"></div>
-            </div>            
+            </div>
         );
     }
 }
