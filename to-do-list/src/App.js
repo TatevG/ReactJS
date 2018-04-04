@@ -38,9 +38,8 @@ const {term, items} = this.state;
   render() {
     return (
       <div className="App">
-        <p>To Do List</p>
         <Article
-          heading="Heading"
+          heading="To Do List"
           author="Tatevik"
         />
         <Input

@@ -6,13 +6,14 @@ body{
 div>textarea {
     justify-self: center;
     width: 250px;
-    height: 150px;
+    height: 50px;
     resize: none;
 }
 
 div>button {
     grid-area: 4/4;
     color: white;
+    align-self: center;
     border: 1px solid dodgerblue;
     background-color: dodgerblue;
     cursor: pointer;
