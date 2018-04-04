@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styles/result.css';
 
 const Result = ({ items }) => {
     return (
-      <ul className="result">
+      <p className="result">
         { items && items.map((item, index) => <li key={index}>{item}</li>) }
-    </ul>
+    </p>
   );
 };
 

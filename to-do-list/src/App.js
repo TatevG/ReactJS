@@ -27,6 +27,7 @@ clickHandler = e => {
 
   this.setState({ items, choosen: items});
 }
+
 search = e => {
 const {term, items} = this.state;
   const text = e.target.value;
@@ -34,7 +35,14 @@ const {term, items} = this.state;
       return todo.toLowerCase().includes(text.toLowerCase());
     });
     this.setState({ choosen: filtered });
-}
+};
+
+  reverse = () => {
+    const { items } = this.state;
+    const reversedArray = items.reverse();
+    this.setState({ items: reversedArray });
+  };
+
   render() {
     return (
       <div className="App">
@@ -46,8 +54,9 @@ const {term, items} = this.state;
           changeHandler={this.inputChangeHandler}
           clickHandler={this.clickHandler}
         />
-      <Result items={this.state.choosen} />
-        <input className ="search" type="text" onChange={this.search} placeholder="Search" />
+        <input className="search" type="text" onChange={this.search} placeholder="Search" />
+        <button className="reserve" onClick={this.reverse}>Reverse it!</button>
+        <Result items={this.state.choosen} />
       </div>
     );
   }
