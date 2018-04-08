@@ -30,8 +30,14 @@ clickHandler = e => {
 moveUp = e =>{
   const {items, done} = this.state;
   const status = e.target.checked;
-  const selected = _.
-  this.setState({ done: items, items });
+  for (const i in items) {
+    if (status){
+      items.pop(i);
+      done.push(i);
+    }
+
+  }
+  this.setState({items, done });
 }
 
 search = e => {
