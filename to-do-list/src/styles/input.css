@@ -1,10 +1,13 @@
-body{
+body {
     display: grid;
     grid-template-columns: (3, 1fr);
-    grid-template-rows: (4, 1fr);
+    grid-template-rows: (5, 1fr);
+    outline: 3px solid rebeccapurple;
+    background-color: mediumpurple;
+    grid-template-areas: 'l c r';
 }
+
 div>textarea {
-    justify-self: center;
     width: 250px;
     height: 50px;
     resize: none;
@@ -19,4 +22,8 @@ div>button {
     cursor: pointer;
     width: 100px;
     height: 40px;
+}
+
+div>button:hover {
+    background-color: aqua;
 }

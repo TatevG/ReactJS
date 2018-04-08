@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       term: '',
       items: [],
-      choosen:[]
+      choosen:[],
+      done:[]
     };
   }
 
@@ -24,8 +25,13 @@ clickHandler = e => {
   if(term !== ''){
     items.push(term);
   }
-
   this.setState({ items, choosen: items});
+}
+moveUp = e =>{
+  const {items, done} = this.state;
+  const status = e.target.checked;
+  const selected = _.
+  this.setState({ done: items, items });
 }
 
 search = e => {
@@ -56,7 +62,7 @@ const {term, items} = this.state;
         />
         <input className="search" type="text" onChange={this.search} placeholder="Search" />
         <button className="reserve" onClick={this.reverse}>Reverse it!</button>
-        <Result items={this.state.choosen} />
+        <Result items={this.state.choosen} changeHandler = {this.moveUp} />      
       </div>
     );
   }

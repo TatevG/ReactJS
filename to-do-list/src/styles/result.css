@@ -1,4 +1,3 @@
-body{
-    display: grid;
-    align-content: center;
+.result{
+    text-align: start;
 }
