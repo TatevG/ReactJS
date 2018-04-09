@@ -28,16 +28,17 @@ clickHandler = e => {
   this.setState({ items, choosen: items});
 }
 moveUp = e =>{
-  const {items, done} = this.state;
+  const {items} = this.state;
   const status = e.target.checked;
-  const elem = e.target.id
-  alert(status + e.target.id);
-  for (const i in items) {
-    if(status)
-      delete items[elem];
+  const elem = e.target.id;
+  const to = 0;
+  const arrayMove = (items, elem, to) => {
+    let element = items[elem];
+    items.splice(elem, 1);
+    items.splice(to, 0, element);
+    return items;
   }
-
-  this.setState({items, done: items });
+  this.setState({done: items });
 }
 
 search = e => {
@@ -56,11 +57,8 @@ const {items} = this.state;
   };
   deleteItem = e =>{
     const {items} = this.state;
-    // const trgt = e.target;
     const indx = e.target.id;
-    alert(indx);
   delete items[indx];
-    alert("hello"+indx);
     this.setState({items });
   }
 
