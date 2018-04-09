@@ -1,4 +1,4 @@
-import React, { Component, PureComponent} from 'react';
+import React, { Component } from 'react';
 import Article from './components/article';
 import Input from './components/input';
 import Result from './components/result';
@@ -30,18 +30,18 @@ clickHandler = e => {
 moveUp = e =>{
   const {items, done} = this.state;
   const status = e.target.checked;
+  const elem = e.target.id
+  alert(status + e.target.id);
   for (const i in items) {
-    if (status){
-      items.pop(i);
-      done.push(i);
-    }
-
+    if(status)
+      delete items[elem];
   }
-  this.setState({items, done });
+
+  this.setState({items, done: items });
 }
 
 search = e => {
-const {term, items} = this.state;
+const {items} = this.state;
   const text = e.target.value;
   const filtered = _.filter(items, (todo) => {
       return todo.toLowerCase().includes(text.toLowerCase());
@@ -54,6 +54,15 @@ const {term, items} = this.state;
     const reversedArray = items.reverse();
     this.setState({ items: reversedArray });
   };
+  deleteItem = e =>{
+    const {items} = this.state;
+    // const trgt = e.target;
+    const indx = e.target.id;
+    alert(indx);
+  delete items[indx];
+    alert("hello"+indx);
+    this.setState({items });
+  }
 
   render() {
     return (
@@ -68,7 +77,7 @@ const {term, items} = this.state;
         />
         <input className="search" type="text" onChange={this.search} placeholder="Search" />
         <button className="reserve" onClick={this.reverse}>Reverse it!</button>
-        <Result items={this.state.choosen} changeHandler = {this.moveUp} />      
+        <Result items={this.state.choosen} changeHandler={this.moveUp} doubleClick={this.deleteItem}/>         
       </div>
     );
   }

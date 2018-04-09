@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/input.css'
+import '../styles/input.css'
 
 const Input = ({ changeHandler, clickHandler }) => (
   <div>

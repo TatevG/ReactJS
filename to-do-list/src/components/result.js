@@ -1,10 +1,13 @@
 import React from 'react';
 import '../styles/result.css';
 
-const Result = ({ items, changeHandler}) => {
+const Result = ({ items, changeHandler, doubleClick}) => {
     return (
       <p className="result">
-        {items && items.map((item, index) => <li key={index}>{item}<input type="checkbox" onChange = { changeHandler }/></li>) }   
+        {items && items.map((item, index) => 
+          <li key={index} name={index} onDoubleClick={doubleClick} onChange={changeHandler}>{item}
+          <input  id={index} value = {index} type="checkbox" />
+        </li>) }   
     </p>
   );
 };
