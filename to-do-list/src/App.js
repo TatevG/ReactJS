@@ -20,47 +20,49 @@ class App extends Component {
     this.setState({term: e.target.value});
   }
 
-clickHandler = e => {
-  const {term, items} = this.state;
-  if(term !== ''){
-    items.push(term);
+  clickHandler = e => {
+    const {term, items} = this.state;
+    if(term !== ''){
+      items.push(term);
+    }
+    this.setState({ items, choosen: items});
   }
-  this.setState({ items, choosen: items});
-}
-moveUp = e =>{
-  const {items} = this.state;
-  const status = e.target.checked;
-  const elem = e.target.id;
-  const to = 0;
-  const arrayMove = (items, elem, to) => {
-    let element = items[elem];
-    items.splice(elem, 1);
-    items.splice(to, 0, element);
-    return items;
-  }
-  this.setState({done: items });
-}
 
-search = e => {
-const {items} = this.state;
-  const text = e.target.value;
-  const filtered = _.filter(items, (todo) => {
-      return todo.toLowerCase().includes(text.toLowerCase());
-    });
+  moveUp = e =>{
+    const {items} = this.state;
+    const status = e.target.checked;
+    const elem = e.target.id;
+    const to = 0;
+    const arrayMove = (items, elem, to) => {
+      let element = items[elem];
+      items.splice(elem, 1);
+      items.splice(to, 0, element);
+      return items;
+    }
+    this.setState({done: items });
+  }
+
+  search = e => {
+    const {items} = this.state;
+    const text = e.target.value;
+    const filtered = _.filter(items, (todo) => {
+        return todo.toLowerCase().includes(text.toLowerCase());
+      });
     this.setState({ choosen: filtered });
-};
+  };
 
   reverse = () => {
     const { items } = this.state;
     const reversedArray = items.reverse();
     this.setState({ items: reversedArray });
   };
+
   deleteItem = e =>{
     const {items} = this.state;
     const indx = e.target.id;
-  delete items[indx];
-    this.setState({items });
-  }
+      delete items[indx];
+    this.setState({ items });
+  };
 
   render() {
     return (
@@ -75,7 +77,11 @@ const {items} = this.state;
         />
         <input className="search" type="text" onChange={this.search} placeholder="Search" />
         <button className="reserve" onClick={this.reverse}>Reverse it!</button>
-        <Result items={this.state.choosen} changeHandler={this.moveUp} doubleClick={this.deleteItem}/>         
+        <Result 
+          items={this.state.choosen} 
+          changeHandler={this.moveUp} 
+          doubleClick={this.deleteItem}
+        />         
       </div>
     );
   }
