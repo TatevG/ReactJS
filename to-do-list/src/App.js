@@ -28,19 +28,18 @@ class App extends Component {
     this.setState({ items, choosen: items});
   }
 
-  moveUp = e =>{
-    const {items} = this.state;
-    const status = e.target.checked;
-    const elem = e.target.id;
-    const to = 0;
-    const arrayMove = (items, elem, to) => {
-      let element = items[elem];
-      items.splice(elem, 1);
-      items.splice(to, 0, element);
-      return items;
-    }
-    this.setState({done: items });
-  }
+  // moveUp = e =>{
+  //   const { items, done } = this.state;
+  //   const status = e.target.checked;
+  //   const elem = e.target.id;
+  //   if(status){
+  //     done[done.length - (done.length - 1)] = items[elem];
+  //     delete items[elem];
+  //   } else{
+
+  //   }
+  //   this.setState({ done: items });
+  // }
 
   search = e => {
     const {items} = this.state;
@@ -67,17 +66,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Article
+        <Article className="Article"
           heading="To Do List"
           author="Tatevik"
         />
-        <Input
+        <Input className="Input"
           changeHandler={this.inputChangeHandler}
           clickHandler={this.clickHandler}
         />
-        <input className="search" type="text" onChange={this.search} placeholder="Search" />
-        <button className="reserve" onClick={this.reverse}>Reverse it!</button>
-        <Result 
+        <div className="sandr">
+          <input className="search" type="text" onChange={this.search} placeholder="Search" />
+          <button className="reserve" onClick={this.reverse}>Reverse it!</button>
+        </div>
+        <Result className="Result"
           items={this.state.choosen} 
           changeHandler={this.moveUp} 
           doubleClick={this.deleteItem}

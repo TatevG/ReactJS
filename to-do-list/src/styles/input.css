@@ -1,20 +1,15 @@
-body {
-    display: grid;
-    grid-template-columns: (3, 1fr);
-    grid-template-rows: (5, 1fr);
-    outline: 3px solid rebeccapurple;
-    background-color: mediumpurple;
-    grid-template-areas: 'l c r';
+.inputs {
+    outline: 3px solid deeppink;
 }
 
-div>textarea {
-    width: 250px;
-    height: 50px;
+.inputs > .term {
+    width: 235px;
+    height: 34px;
+    padding-left: 15px;
     resize: none;
 }
 
-div>button {
-    grid-area: 4/4;
+.inputs > .btn {
     color: white;
     align-self: center;
     border: 1px solid dodgerblue;
@@ -24,6 +19,6 @@ div>button {
     height: 40px;
 }
 
-div>button:hover {
-    background-color: aqua;
+.inputs > .btn:hover {
+    background-color: gold;
 }

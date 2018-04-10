@@ -1,8 +1,46 @@
-/* body {
+@import url("./styles/article.css");
+@import url("./styles/input.css");
+@import url("./styles/result.css");
+.App {
     display: grid;
-    grid-template-columns: (3, 1fr);
-    grid-template-rows: (5, 1fr);
-    outline: 3px solid rebeccapurple;
-    background-color: mediumpurple;
-    grid-template-areas: 'l c r';
-} */
+    grid-column: 1fr;
+    grid-row: auto;
+    grid-gap: 1em;
+    text-align: center;
+}
+
+.Article {
+    grid-row: 1;
+}
+
+.Input {
+    grid-row: 2;
+}
+
+.sandr {
+    grid-row: 3;
+}
+
+.sandr>.search {
+    width: 235px;
+    height: 34px;
+    padding-left: 15px;
+}
+
+.sandr>button {
+    color: white;
+    align-self: center;
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
+
+.sandr>button:hover {
+    background-color: gold;
+}
+
+.Result {
+    grid-row: 4;
+}
