@@ -28,18 +28,19 @@ class App extends Component {
     this.setState({ items, choosen: items});
   }
 
-  // moveUp = e =>{
-  //   const { items, done } = this.state;
-  //   const status = e.target.checked;
-  //   const elem = e.target.id;
-  //   if(status){
-  //     done[done.length - (done.length - 1)] = items[elem];
-  //     delete items[elem];
-  //   } else{
-
-  //   }
-  //   this.setState({ done: items });
-  // }
+  moveUp = e =>{
+    const { items, done } = this.state;
+    const status = e.target.checked;
+    const index = e.target.id;
+    const val = e.target.value
+    // alert("index is "+index);
+    if(status){
+      done.push(val);
+      // alert("array item is "+ done[0]);
+      delete items[index];
+    }
+    this.setState({ items, done });
+  }
 
   search = e => {
     const {items} = this.state;
