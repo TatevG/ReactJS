@@ -3,6 +3,7 @@ import Article from './components/article';
 import Input from './components/input';
 import Result from './components/result';
 import _ from 'lodash';
+// import './App.scss';
 import './App.css';
 
 class App extends Component {
@@ -39,7 +40,18 @@ class App extends Component {
       // alert("array item is "+ done[0]);
       delete items[index];
     }
-    this.setState({ items, done });
+    this.setState({ done });
+  }
+  moveDown = e => {
+    const { items, done } = this.state;
+    const status = e.target.checked;
+    const index = e.target.id;
+    const val = e.target.value
+    if (status) {
+      items.push(val);
+      delete done[index];
+    }
+    this.setState({ items });
   }
 
   search = e => {
@@ -65,6 +77,8 @@ class App extends Component {
   };
 
   render() {
+    const {done} = this.state;
+    console.log(done);
     return (
       <div className="App">
         <Article className="Article"
@@ -81,7 +95,9 @@ class App extends Component {
         </div>
         <Result className="Result"
           items={this.state.choosen} 
-          changeHandler={this.moveUp} 
+          done = {this.state.done}
+          changeHandlerUp={this.moveUp} 
+          changeHandlerDown={this.moveDown} 
           doubleClick={this.deleteItem}
         />         
       </div>
