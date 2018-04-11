@@ -75,8 +75,6 @@ class App extends Component {
   };
 
   render() {
-    const {done} = this.state;
-    console.log(done);
     return (
       <div className="App">
         <Article className="Article"

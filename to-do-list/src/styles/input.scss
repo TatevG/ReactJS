@@ -1,0 +1,23 @@
+.inputs {
+    outline: 3px solid deeppink;
+    > {
+        .term {
+            width: 235px;
+            height: 34px;
+            padding-left: 15px;
+            resize: none;
+        }
+        .btn {
+            color: white;
+            align-self: center;
+            border: 1px solid dodgerblue;
+            background-color: dodgerblue;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            &:hover {
+                background-color: gold;
+            }
+        }
+    }
+}
