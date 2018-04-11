@@ -34,10 +34,8 @@ class App extends Component {
     const status = e.target.checked;
     const index = e.target.id;
     const val = e.target.value
-    // alert("index is "+index);
     if(status){
       done.push(val);
-      // alert("array item is "+ done[0]);
       delete items[index];
     }
     this.setState({ done });
