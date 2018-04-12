@@ -31,6 +31,8 @@ class App extends Component {
 
   moveUp = e =>{
     const { items, done } = this.state;
+    // const newItems = [... items];
+    // const newDone = [... done];
     const status = e.target.checked;
     const index = e.target.id;
     const val = e.target.value

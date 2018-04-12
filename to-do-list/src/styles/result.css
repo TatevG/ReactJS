@@ -1,13 +1,11 @@
-.result{
-    width: 50%;
+/* .result{
     outline: 3px solid darkorange;
-    text-align: left;
-}
+} */
 
-.done{
+.done {
     color: deeppink;
 }
 
-.items{
-    color: purple;
+.items {
+    color: dodgerblue;
 }
