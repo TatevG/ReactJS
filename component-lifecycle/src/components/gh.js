@@ -13,7 +13,7 @@ class Gh extends React.Component {
     console.log('cdm');
     let user;
     try {
-      const result = await fetch('https://api.github.com/users/narghev');
+      const result = await fetch('https://api.github.com/users/tatevg');
       user = await result.json();
     }
     catch(e){
