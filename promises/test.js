@@ -1,11 +1,11 @@
-// const a = fetch('https://api.github.com/users/narghev');
+// const a = fetch('https://api.github.com/users/tatevg');
 // console.log(a);
 
 // setTimeout(()=>{
 //   console.log(a);
 // },1000)
 
-// fetch('https://api.github.com/users/narghev').then((response)=>{
+// fetch('https://api.github.com/users/tatevg').then((response)=>{
 //   response.json().then((value)=>{
 //     console.log(value);
 //   }).catch((err)=>{
@@ -18,7 +18,7 @@
 
 const myFunction = async () => {
   try {
-    const response = await fetch('https://api.github.com/users/narghev');
+    const response = await fetch('https://api.github.com/users/tatevg');
     const value = await response.json();
     console.log(value);
   }
