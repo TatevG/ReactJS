@@ -1,1 +1,1 @@
-# ISTC-ReactJS
+# ReactJS-Course
