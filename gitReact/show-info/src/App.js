@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Data from './components/data';
 import Inputs from './components/inputs';
 import Loading from './components/loading';
-import loadingGif from './images/loading.gif'; 
+import loadingGif from './images/loading.gif';
 import Repos from './components/repos';
 
 
@@ -40,6 +40,7 @@ class App extends Component {
 
   render() {
     const { user, loading, reposVisible } = this.state;
+    // console.log(user);
     if (loading) {
       return (
         <div className="App">
@@ -53,8 +54,8 @@ class App extends Component {
           changeHandler={this.changeHandler}
           clickHandler={this.clickHandler}
         />
-        <Data 
-          {...{ user }} 
+        <Data
+          {...{ user }}
         />
         {user && <Repos userName={user.login} reposUrl={user.repos_url} rVisible={reposVisible}/>}
       </div>
