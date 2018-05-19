@@ -7,7 +7,7 @@ class Result extends Component {
   render() {
     const { city, weather, country, temp } = this.props.weatherData;
     const celcius = Math.round(temp - 273.15);
-    
+    // console.log(weather);
     return (
       <div className="WeatherCard">
         <h1 className="WeatherCard-degrees">{celcius}°</h1>
