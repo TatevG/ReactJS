@@ -56,7 +56,7 @@ class App extends Component {
 
   render() {
     const { searchDone, weatherData, errorMessage } = this.state;
-    console.log(weatherData);
+    // console.log(weatherData);
     return (
       <div className="App">
         <SearchBar
@@ -65,7 +65,7 @@ class App extends Component {
         />
         {searchDone && (
           <Result
-          // In case if you want to send the entire object to the component:
+            // In case if you want to send the entire object to the component:
             // weatherData={weatherData}
             weather={this.state.weatherData.weather}
             city={this.state.weatherData.city}
