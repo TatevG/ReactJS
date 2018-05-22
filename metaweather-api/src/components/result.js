@@ -1,7 +1,8 @@
 import React from "react";
 
-const Result = ({ weather, country, city}) =>{
-    return (
+const Result = ({ error, weather, country, city }) =>{
+	if(weather && country && city){
+		return (
       <div className="WeatherCard">
 				<h2 className="WeatherCard-city">City:
 		      {city}
@@ -23,6 +24,9 @@ const Result = ({ weather, country, city}) =>{
 		    </h2>
       </div>
     );
+	}else{
+		alert({error});
+	}	
 }
 
 export default Result;

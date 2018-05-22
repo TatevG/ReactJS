@@ -28,6 +28,7 @@ class App extends React.Component {
     const {title} = this.state;
     let data = null;
     let weatherObj = null;
+    try{
       const first_request = await fetch(`https://www.metaweather.com/api/location/search/?query=${title}`);
       data = await first_request.json();
       const second_request = await fetch(`https://www.metaweather.com/api/location/${data[0].woeid}/`);
@@ -42,7 +43,11 @@ class App extends React.Component {
       msg:'',
       searchDone: true
     });
+    }catch(e){
+      this.setState({msg: 'Please insert right value'});
+    }
   }
+
   render() {
     const { weatherObj, msg, searchDone } = this.state;
     // console.log(weatherObj);
@@ -58,12 +63,14 @@ class App extends React.Component {
                 <div className="col-xs-7 form-container">
                   <Input
                     changeHandler={this.changeHandler}
-                    clickHandler={this.clickHandler} />
-                    {searchDone && (
+                    clickHandler={this.clickHandler}
+                  />
+                  {searchDone && (
                   <Result
                     weather={this.state.weatherObj.aboutWether}
                     city={this.state.weatherObj.title}
                     country = {this.state.weatherObj.parent}
+                    error = {this.state.msg}
                   />
                 )}
                 </div>
