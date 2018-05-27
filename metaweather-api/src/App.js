@@ -24,6 +24,7 @@ class App extends React.Component {
   changeHandler = event => {
     this.setState({ title: event.target.value });
   }
+  
   clickHandler = async () => {
     const {title} = this.state;
     let data = null;
