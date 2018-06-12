@@ -28,11 +28,6 @@ car.getInfo();
 */
 
 
-
-
-
-
-
 class Human{
   constructor(name, surname, age){
     this.name = name;

@@ -43,8 +43,6 @@ a.pop();
 // console.log(test);
 
 
-
-
 let contacts = {
     a0: 3216,
     a1: 13871239,
