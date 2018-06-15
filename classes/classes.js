@@ -4,6 +4,8 @@
 // add a function to the second class 
 // make an object out of first class
 // call a function of the object
+
+
 class Shapes {
     constructor(width, height){
         this.width = width;
@@ -13,6 +15,7 @@ class Shapes {
         console.log(`Width is ${this.width}, height is ${this.height} => area is ${this.width * this.height}`);
     }
 }
+
 class Rectangle extends Shapes{
     constructor(width, height) {
         super(width, height);

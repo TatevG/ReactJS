@@ -174,7 +174,6 @@ class Human {
     this.lName = lName;
     this.age = age;
   }
-
   speak(){
     console.log(`Hi, I am ${this.fName}, i am ${this.age}.`)
   }
