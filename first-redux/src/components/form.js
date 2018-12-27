@@ -23,6 +23,7 @@ class Form extends React.Component {
     }
 
     render() {
+      console.log(this.props.counter)
         return (
             <div>
                 <button onClick={this.clickHandler} value={this.props.counter}>Click</button>
